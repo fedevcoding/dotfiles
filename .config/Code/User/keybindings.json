@@ -2,6 +2,6 @@
 [
     {
         "key": "ctrl+q",
-        "command": "editor.emmet.action.balanceOut"
+        "command": "editor.emmet.action.balanceOut",
     }
 ]
