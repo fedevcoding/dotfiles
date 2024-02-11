@@ -270,6 +270,6 @@ export PATH=$PATH:/usr/local/go/bin
 alias ii="xdg-open"
 alias upd="sudo apt update -y && sudo apt upgrade -y"
 alias blue="sudo service bluetooth restart"
-#eval "$(starship init zsh)"
+eval "$(starship init zsh)"
 alias rm='echo "Use trash-cli dumbass."; false'
 alias tp="trash-put"
