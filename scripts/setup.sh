@@ -1,10 +1,10 @@
 #!/bin/bash
 
-packages=("neofetch" "btop" "nodejs" "npm" "htop" "tilix" "tmux" "curl" "vim" "stow")
+packages=("neofetch" "cmatrix" "btop" "nodejs" "npm" "htop" "tilix" "tmux" "curl" "vim" "stow" "libfuse2" "wget")
 
-# Install apt packages
+# Install APT packages
 for package in ${packages[@]}; do
-    if ! dpkg -l | grep -q $package; then
+    if ! which $package; then
         sudo apt install -y $package
     else
         echo "$package is already installed"
@@ -12,10 +12,10 @@ for package in ${packages[@]}; do
 done
 
 # Link dotfiles
-stow .
+stow --adopt .
 
 # Install neovim
-curl https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage ~/Downloads/nvim.appimage
+wget https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage -P ~/Downloads
 chmod u+x ~/Downloads/nvim.appimage
 sudo mv ~/Downloads/nvim.appimage /usr/bin/nvim
 rm ~/Downloads/nvim.appimage
