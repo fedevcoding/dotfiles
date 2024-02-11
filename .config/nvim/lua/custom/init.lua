@@ -1,9 +1,7 @@
-vim.g.dap_virtual_text = true
-vim.opt.colorcolumn = "80"
+-- local autocmd = vim.api.nvim_create_autocmd
 
--- Disable persistent undo for files in /private directory
-vim.api.nvim_create_autocmd("BufReadPre", { pattern = "/private/*", command = "set noundofile" })
-
--- Enable persistent undo for other files
-vim.opt.undofile = true
-
+-- Auto resize panes when resizing nvim window
+-- autocmd("VimResized", {
+--   pattern = "*",
+--   command = "tabdo wincmd =",
+-- })
