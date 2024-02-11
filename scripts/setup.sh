@@ -15,7 +15,7 @@ done
 stow --adopt .
 
 # Install neovim
-wget https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage -P ~/Downloads
+wget https://github.com/neovim/neovim/releases/download/v0.9.5/nvim.appimage -P ~/Downloads
 chmod u+x ~/Downloads/nvim.appimage
 sudo mv ~/Downloads/nvim.appimage /usr/bin/nvim
 rm ~/Downloads/nvim.appimage
