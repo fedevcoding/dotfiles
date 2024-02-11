@@ -11,9 +11,6 @@ for package in ${packages[@]}; do
     fi
 done
 
-# Link dotfiles
-stow --adopt .
-
 # Install neovim
 wget https://github.com/neovim/neovim/releases/download/v0.9.5/nvim.appimage -P ~/Downloads
 chmod u+x ~/Downloads/nvim.appimage
@@ -24,4 +21,6 @@ rm ~/Downloads/nvim.appimage
 rm -rf ~/.config/nvim
 rm -rf ~/.local/share/nvim
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
-nvim --headless +PackerInstall +qall
+
+# Link dotfiles
+stow .
