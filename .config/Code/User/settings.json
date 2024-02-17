@@ -1,7 +1,7 @@
 {
  "redhat.telemetry.enabled": true,
  "github.copilot.enable": {
-  "*": true,
+  "*": false,
   "plaintext": false,
   "markdown": false,
   "scminput": false
@@ -82,5 +82,6 @@
  "svelte.enable-ts-plugin": true,
  "files.exclude": {
   "**/.git": false
- }
+ },
+ "workbench.colorTheme": "Catppuccin Mocha"
 }
